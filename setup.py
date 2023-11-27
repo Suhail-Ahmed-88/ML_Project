@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 from typing import List
 
-HYPEN_E_DOT = "-e ."
+# HYPEN_E_DOT = "-e ."
 
 
 def get_requirements(file_path:str)->List[str]:
@@ -15,22 +15,11 @@ def get_requirements(file_path:str)->List[str]:
         requirements=file_obj.readlines()
         requirements=[req.replace('\n', "") for req in requirements]
 
-        if HYPEN_E_DOT in requirements:
-            requirements.remove(HYPEN_E_DOT)
+        # if HYPEN_E_DOT in requirements:
+        #     requirements.remove(HYPEN_E_DOT)
 
 
     return requirements
-
-
-
-
-
-
-
-
-
-
-
 
 
 setup(
